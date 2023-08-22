@@ -1,0 +1,555 @@
+/* CSS général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* En-tête */
+header {
+  background-color: #fff; /* Fond blanc pour l'en-tête */
+  padding: 10px 0;
+}
+
+.navbar-brand img {
+  max-width: 150px;
+}
+
+.navbar {
+  background-color: #fff; /* Navbar avec fond blanc */
+  padding: 10px 0;
+  border-bottom: 1px solid #F6455D; /* Ligne de séparation rose */
+  position: fixed; /* Navbar fixe en haut de la page */
+  top: 0; /* Position en haut de la page */
+  left: 0; /* Position à gauche */
+  right: 0; /* Position à droite */
+  z-index: 999; /* Assure que le navbar est au-dessus du contenu */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: black; /* Texte en gris */
+}
+
+/* Carrousel */
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: zoomInOut 20s infinite;
+  opacity: 0;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-caption {
+  text-align: center;
+  color: #fff;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  color: #fff; /* Texte en rose */
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff; /* Texte en blanc */
+}
+
+.carousel-caption .btn {
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #F6455D; /* Bouton en rose */
+  border: none;
+}
+
+.carousel-caption .btn:hover {
+  background-color: #F53A4E; /* Légère variation de rose au survol */
+}
+
+/* Animation pour les images du diaporama */
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  10%, 90% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Sections cliquables */
+.features {
+  padding: 50px 0;
+}
+
+.features h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #F6455D; /* Texte en rose */
+}
+
+.features p {
+  font-size: 1.2rem;
+  color: #3e3939; /* Texte en gris */
+}
+
+.features img {
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.features .feature {
+  text-align: center;
+}
+.features .feature:hover {
+  background-color:#189bdc7d;
+ }
+
+/* Style personnalisé pour le bouton "Faire un Don" dans le header */
+.btn-don {
+  background-color: #F6455D !important; /* Fond orange pour le bouton "Faire un Don" */
+  color: #FFF !important; /* Texte en blanc pour le bouton "Faire un Don" */
+}
+
+/* Style CSS personnalisé pour la nouvelle section */
+#nouvelle-section {
+  padding: 50px 0;
+}
+
+#nouvelle-section .texte-section {
+  background-color: #4AA3A2; /* Couleur d'arrière-plan pour le texte */
+  color: #FFF; /* Texte en blanc */
+  padding: 20px;
+}
+
+#nouvelle-section .video-section {
+  background-color: #FFF; /* Fond blanc pour la vidéo */
+  padding: 20px;
+}
+
+/* CSS */
+.animated-card {
+  visibility: hidden;
+}
+
+.animate-in-view {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+#temoignages {
+  padding: 50px 0;
+}
+
+#temoignages h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#temoignages .card {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#temoignages .card:hover {
+  transform: translateY(-10px);
+}
+
+#temoignages .card img {
+  max-width: 100%;
+  height: auto;
+}
+
+#temoignages .card-body {
+  padding: 20px;
+}
+
+#temoignages .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#temoignages .card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Animation AOS pour les témoignages */
+.animated-card-left {
+  transform: translateX(-100%);
+  transition-duration: 4s;
+}
+
+.animated-card-right {
+  transform: translateX(100%);
+}
+
+@media (min-width: 768px) {
+  .animated-card-left[data-aos^='fade'] {
+    transform: translateX(-30%);
+  }
+
+  .animated-card-right[data-aos^='fade'] {
+    transform: translateX(30%);
+    transition-duration: 4s;
+  }
+}
+
+/* Style CSS personnalisé pour la section Projets Réalisés */
+#projets-realises {
+  background-color: #f8f9fa; /* Couleur de fond */
+  padding: 50px 0;
+}
+
+#projets-realises h2 {
+  color: #F6455D; /* Texte en rose */
+}
+
+#projets-realises p {
+  color: #666; /* Texte en gris */
+}
+
+#projets-realises .card {
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#projets-realises .card:hover {
+  transform: translateY(-10px);
+}
+
+#projets-realises .card img {
+  max-width: 100%;
+  height: auto;
+}
+
+#projets-realises .card-body {
+  padding: 20px;
+}
+
+#projets-realises .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #F6455D; /* Texte en rose */
+}
+
+#projets-realises .card-text {
+  font-size: 14px;
+  color: #666;
+}
+
+#devenir-volontaire {
+  background-color: #F5F5F5; /* Couleur de fond gris clair */
+  padding: 60px 0;
+}
+
+#devenir-volontaire .section-heading {
+  font-size: 2.5rem;
+  color: #F6455D; /* Couleur rose */
+  margin-bottom: 20px;
+}
+
+#devenir-volontaire .section-description {
+  font-size: 1.2rem;
+  color: #fff; /* Couleur gris foncé */
+  margin-bottom: 30px;
+}
+
+#volunteer-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#volunteer-form .form-group {
+  margin-bottom: 20px;
+}
+
+#volunteer-form input,
+#volunteer-form textarea {
+  border-radius: 5px;
+}
+
+#volunteer-form input::placeholder,
+#volunteer-form textarea::placeholder {
+  color: #999; /* Couleur du texte de l'indicateur de saisie */
+}
+
+#volunteer-form button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #F6455D;
+  border: none;
+  color: #FFF; /* Couleur du texte en blanc */
+}
+
+#volunteer-form button:hover {
+  background-color: #F53A4E; /* Couleur rose légèrement plus sombre au survol */
+}
+
+#devenir-volontaire {
+  position: relative;
+  background-image: url('kids-4608518.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+}
+
+#devenir-volontaire.with-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond noir semi-transparent */
+}
+
+#equipe {
+  background-color: #F2F2F2; /* Couleur de fond pour la section équipe */
+  padding: 50px 0;
+}
+
+#equipe h2 {
+  color: #F6455D; /* Texte en rose */
+}
+
+.member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.member img {
+  border-radius: 50%; /* Pour afficher les images des membres en cercle */
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.member h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.member p {
+  font-size: 16px;
+  color: #666; /* Texte en gris */
+}
+
+/* Animation pour les membres de l'équipe */
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10px); /* La distance que l'image va parcourir */
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(10px); /* La distance que l'image va parcourir */
+  }
+}
+
+/* Appliquer l'animation aux membres de l'équipe */
+.animated-member {
+  animation: moveLeft 1ms infinite alternate, moveRight 1s infinite alternate; /* Animation synchrone */
+}
+
+/* Pour les logos des partenaires */
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* Ajustez la taille selon vos préférences */
+  height: auto; /* Permet de conserver le ratio d'aspect */
+  margin: 10px; /* Ajustez la marge selon vos préférences */
+}
+
+/* Pour les icônes des réseaux sociaux */
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons li {
+  margin: 0 10px;
+}
+
+.social-icons i {
+  font-size: 24px; /* Ajustez la taille des icônes selon vos préférences */
+  color: #333; /* Ajustez la couleur des icônes selon vos préférences */
+}
+
+/* Pour la géolocalisation */
+.location {
+  width: 100%; /* Ajustez la largeur de l'image selon vos préférences */
+  height: auto; /* Permet de conserver le ratio d'aspect */
+  margin-top: 10px;
+}
+
+/* Styles pour le footer */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px 0;
+}
+
+/* Styles pour le titre du footer */
+.footer-title {
+  font-size: 20px;
+  color: chocolate;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les icônes des réseaux sociaux */
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  background-color: #fff;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #F6455D ;
+}
+
+/* Nouvelle section avec compteurs */
+.counters-section {
+  padding: 5px 0;
+}
+
+.counters-section .counter-heading {
+  width: 40vw;
+  height: 10vh;
+  background: linear-gradient(45deg, gold, orangered);
+  border-radius: 1rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  padding: 0 .5rem;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 .2rem .2rem #0006;
+  transition: .8s ease-in-out;
+  
+}
+
+.counters-section h1 {
+  font: 700 2.8rem sans-serif;
+}
+
+.counters-section:hover,
+.counter-box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  filter: saturate(300%);
+  box-shadow: 0 .2rem .2rem #0006;
+}
+
+.counters-section .counters {
+  width: 70vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counters-section .counter-box {
+  width: 32%;
+  height: 9rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: .8s ease-in-out;
+  box-shadow: 0 .2rem .2rem #0006;
+}
+
+.counters-section .counter-box:nth-child(1) {
+  background: linear-gradient(45deg, pink, crimson);
+}
+
+.counters-section .counter-box:nth-child(2) {
+  background: linear-gradient(45deg, cyan, blue);
+}
+
+.counters-section .counter-box:nth-child(3) {
+  background: linear-gradient(45deg, rgb(56, 116, 200), rgb(69, 144, 219));
+}
+
+.counters-section .counter-icon {
+  font-size: 2.5rem;
+}
+
+.counters-section .counter-info {
+  color: #fff;
+  text-shadow: 1px 1px 1px #0007;
+}
+
+.counters-section .counter-info h1.counter {
+  font: normal 2.8rem sans-serif;
+}
+
+.counters-section .counter-info p {
+  font: normal 1.1rem sans-serif;
+  margin-top: .4rem;
+}

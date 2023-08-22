@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #161111;
+        }
+
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="file"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            background-color: #e3230d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .file-upload:hover {
+            background-color: #345493;
+        }
+
+        .file-upload input[type="file"] {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #e82b13;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #345493;
+        }
+        
+        .buttons-container {
+            display: flex;
+            justify-content: flex-end; /* Boutons alignés à droite */
+            padding: 10px 20px;
+            background-color: #e82b13;
+            color: #fff;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .buttons-container button {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 3px;
+            padding: 8px 16px;
+            margin-left: 10px; /* Espacement entre les boutons */
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        .buttons-container button:last-child {
+            margin-left: 0; /* Pas d'espacement pour le dernier bouton */
+        }
+
+        .buttons-container button:hover {
+            background-color: #fff;
+            color: #4267B2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>NAVBAR</h1>
+    </div>
+   
+    <div class="container">
+        <div class="buttons-container">
+            <button type="button">Faire une Publication</button>
+            <button type="button">Voir les publications</button>
+        </div>
+        <form id="publish-form">
+            <div class="input-container">
+                <div class="profile-image">
+                    <img src="man-156584_1920.png" alt="Profil">
+                </div>
+                <textarea id="message" name="message" rows="6" required placeholder="Exprimez-vous..."></textarea>
+            </div>
+            <div class="input-container">
+                <label class="file-upload">
+                    <span>Ajouter un fichier</span>
+                    <input type="file" id="media" name="media" accept="image/*, video/*">
+                </label>
+            </div>
+            <button type="submit">Publier</button>
+        </form>
+    </div>
+</body>
+</html>
